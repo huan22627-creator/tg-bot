@@ -5,8 +5,14 @@ from datetime import datetime, timezone
 SENDKEY = "SCT332681TcPiHS6Z87jLHXKcvobehtK7b"
 
 def push(title, content):
-    url = f"https://sctapi.ftqq.com/{SENDKEY}.send"
+    import os
+    key = os.environ.get("SENDKEY")
+    url = "https://sctapi.ftqq.com/" + key + ".send"
     requests.post(url, data={"title": title, "desp": content})
+    hook = os.environ.get("WEBHOOK_URL")
+    if hook:
+        d = {"msgtype": "text", "text": {"content": title + "\n\n" + content}}
+        requests.post(hook, json=d)
 
 morning_msgs = [
     ("醒了吗", "今天记得吃早饭，别将就。"),
