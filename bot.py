@@ -424,4 +424,4 @@ else:
 t, c = random.choice(morning_msgs)
 
 push(t, c)
-print(f"已推送：{t} - {c})
+print("done")
