@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timezone
 import json
 
-WEBHOOK = “https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=e5c3cce6-dcb4-4176-8d40-482e4faff1f7”
+WEBHOOK = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=e5c3cce6-dcb4-4176-8d40-482e4faff1f7"
 
 def push(title, content):
 data = {
