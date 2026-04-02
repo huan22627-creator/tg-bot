@@ -5,11 +5,12 @@ import json
 
 WEBHOOK = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=e5c3cce6-dcb4-4176-8d40-482e4faff1f7"
 
+
 def push(title, content):
 data = {
-“msgtype”: “text”,
-“text”: {
-“content”: f”{title}\n\n{content}”
+    "msgtype": "text",
+    "text": {
+        "content": f"{title}\n\n{content}"
 }
 }
 requests.post(WEBHOOK, json=data)
