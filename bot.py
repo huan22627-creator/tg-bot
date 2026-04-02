@@ -2,7 +2,7 @@ import requests
 import random
 from datetime import datetime, timezone
 
-SENDKEY = “SCT332681TcPiHS6Z87jLHXKcvobehtK7b"
+SENDKEY = "SCT332681TcPiHS6Z87jLHXKcvobehtK7b"
 
 def push(title, content):
 url = f"https://sctapi.ftqq.com/{SENDKEY}.send"
